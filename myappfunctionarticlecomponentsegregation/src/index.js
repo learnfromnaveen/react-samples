@@ -16,18 +16,51 @@ var article = {
     "content": "RH, formerly known as Restoration Hardware, announced Thursday it is considering a $300 million convertible notes offering due in 2024.\r\nThe proceeds from the offering would be used primarily to retire the company's $200 million of second lien debt and reduce… [+1737 chars]"
 };
 
+function ArticleImage(props) {
+    return (
+        <div>
+            <img src={props.url} className="article-image" />
+            <span>source: {props.source}</span>
+        </div>
+    )
+}
+
+function ArticleHeader(props) {
+    return (
+        <div>
+            <h1>{props.header.title}</h1>
+
+            <p><strong>Author:</strong> {props.header.author}, <strong>Published: </strong> {props.header.publishedAt} </p>
+        </div>
+    );
+}
+
+function ArticleContent(props) {
+    return (
+        <p className="article-content">
+            {props.content}
+        </p>
+    );
+}
+
 function ArticleElement(props) {
     return (
         <article className="article">
-            <h1>{props.articleDetail.title}</h1>
-            <p><strong>Author:</strong> {props.articleDetail.author}, <strong>Published: </strong> {props.articleDetail.publishedAt} </p>
-            <div>
-                <img src={props.articleDetail.urlToImage} className="article-image"/>
-                <span>source: {props.articleDetail.source.name}</span>
-            </div>
-            <p className="article-content">
-                {props.articleDetail.content}
-            </p>
+
+            <ArticleHeader header={
+                {
+                    title: props.articleDetail.title,
+                    author: props.articleDetail.author,
+                    publishedAt: props.articleDetail.publishedAt
+                }
+            } />
+           
+            <ArticleImage
+                url={props.articleDetail.urlToImage}
+                source={props.articleDetail.source.name} />
+
+            <ArticleContent content={props.articleDetail.content}/>
+
         </article>
     )
 }
