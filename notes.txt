@@ -9,3 +9,6 @@ npx create-react-app myapp
 
 npm install
 
+# to run the react app below is the command  
+npm start
+
