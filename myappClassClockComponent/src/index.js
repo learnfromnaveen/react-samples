@@ -9,8 +9,9 @@ class Clock extends React.Component{
   constructor(props){
     //1. Pass props to base class constructor 
     super(props);
-    //2.create a state
-    this.state  = { 
+    //2. Create a state
+    this.state  = {
+      title: 'My React Clock',
       date : new Date()
     } ;
   }
@@ -43,6 +44,8 @@ class Clock extends React.Component{
     } ;
 
     this.setState(newState);
+
+    //this.state.date  = new Date();
   }
 
 
@@ -50,8 +53,8 @@ class Clock extends React.Component{
 
     return(
       <div> 
-        <h1>Hello {this.props.name}</h1>
-        <h2>It is {this.state.date.toLocaleTimeString()}</h2>
+        <h1>{this.state.title}</h1>
+        <h2>Time now is {this.state.date.toLocaleTimeString()}</h2>
       </div>
     )
 
