@@ -1,0 +1,12 @@
+.article{
+    border: 1px solid #3763ab;
+    padding : 20px;
+}
+
+.article-header{
+    color: #9c9ea1;
+}
+
+.article-content{ 
+    font-size: 30px;
+}
