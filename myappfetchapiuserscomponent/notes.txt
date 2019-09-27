@@ -1,0 +1,22 @@
+Requirement:  
+referece: https://jsonplaceholder.typicode.com/ 
+
+1. Given a url below, using fetch api 
+   bind the details of the user to the react component. 
+
+    url: https://jsonplaceholder.typicode.com/users
+
+    syntax:  
+
+    fetch(URL)
+    .then(respone => respone.json())
+    .then(data => console.log(data));  
+
+
+    To beautify the ui use the bootstrap cdn link given below  
+    
+    https://www.bootstrapcdn.com/
+
+    include this link inside ./public/index.html page  
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
