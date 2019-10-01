@@ -14,13 +14,9 @@ class NameForm extends React.Component {
   }
 
   onChange(e) {
-    var key = e.target.name;
-    var newState = {};
-    newState[key] = e.target.value;
-
-    console.log(newState);
-
-    this.setState(newState);
+    this.setState({
+      [e.target.name]: e.target.value
+    });
   }
 
   onSubmit(e) {
