@@ -36,7 +36,7 @@ export default class Users extends React.Component {
       </tr>
     });
     return(
-      <table className="table table-striped">
+      <table className="table table-hover">
         <thead>
           <tr><th>Name</th><th>Username</th><th>Email</th><th></th></tr>
         </thead>

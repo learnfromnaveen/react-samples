@@ -3,15 +3,15 @@ import { NavLink } from "react-router-dom";
 
 function Header(props) {
   return (
-    <nav className="nav nav-default">
-       <ul className="nav navbar-nav">
-      <li className="active">
-        <NavLink to="/users">Users</NavLink>
-      </li>
-      <li>
-      <NavLink to="/posts">Posts</NavLink></li>
-      
-    </ul>
+    <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+      <ul className="navbar-nav">
+        <li className="nav-item">
+          <NavLink to="/users" className="nav-link">Users</NavLink>
+        </li>
+        <li>
+          <NavLink to="/posts" className="nav-link">Posts</NavLink>
+        </li>
+      </ul>
     </nav>
   );
 }

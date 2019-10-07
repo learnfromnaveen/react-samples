@@ -25,9 +25,9 @@ export default class User extends React.Component{
         const { fromPath }  = this.props.location.state;
         return(
             <div className="container">
-            <div className="panel panel-default">
-                <div className="panel-heading">User Details</div>
-                <div className="panel-body">
+            <div className="card">
+                <div className="card-header">User Details</div>
+                <div className="card-body">
                     <table className="table">
                         <tbody>
                             <tr>
@@ -38,13 +38,20 @@ export default class User extends React.Component{
                             <tr>
                                 <td><strong>Email</strong></td><td>{this.state.user.email}</td>
                             </tr>
+                            <tr>
+                                <td><strong>Phone</strong></td><td>{this.state.user.phone}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Website</strong></td><td>{this.state.user.website}</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
-            </div>
-            <div className="container">
+                <div className="card-footer">
                 <Link className="btn btn-primary" to={fromPath}>Go Back</Link>
             </div>
+            </div>
+            
             </div>
         )
     }
