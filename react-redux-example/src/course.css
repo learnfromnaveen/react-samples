@@ -1,0 +1,8 @@
+div.course-container, div.label{
+    padding: 5px;
+}
+
+div.label{
+    text-align: left;
+}
+
